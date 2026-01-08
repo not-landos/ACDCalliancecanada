@@ -1,19 +1,22 @@
 // ACDC Website JavaScript
 
-// Scale page proportionally based on 1200px as the ideal width
-function scaleContent() {
+// Scale the fixed 1200px layout to fit viewport
+function scaleLayout() {
+    const wrapper = document.querySelector('.site-wrapper');
     const baseWidth = 1200;
     const viewportWidth = window.innerWidth;
     const scale = viewportWidth / baseWidth;
     
-    document.documentElement.style.setProperty('--scale', scale);
-    document.documentElement.style.fontSize = (16 * scale) + 'px';
+    wrapper.style.transform = `scale(${scale})`;
+    // Adjust body height to account for scaled content
+    document.body.style.height = (wrapper.offsetHeight * scale) + 'px';
 }
 
-scaleContent();
-window.addEventListener('resize', scaleContent);
+scaleLayout();
+window.addEventListener('resize', scaleLayout);
 
 document.addEventListener('DOMContentLoaded', function() {
+    scaleLayout();
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileNav = document.querySelector('.mobile-nav');
