@@ -3,135 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alliance of Canadian Defence Companies</title>
-    <meta name="description" content="ACDC unites Canadian-controlled defence companies to deliver modern, sovereign capability for DND and the CAF.">
+    <title>ACDC | Alliance of Canadian Defence Companies</title>
+    <meta name="description" content="ACDC exists to rebuild Canada's sovereign defence-industrial base. We champion Canadian-controlled defence companies that design, build, sustain, and export next-generation defence platforms.">
     <meta property="og:title" content="Alliance of Canadian Defence Companies">
-    <meta property="og:description" content="Shifting national defence delivery toward Canadian industry with modern, export-ready capability.">
+    <meta property="og:description" content="Rebuilding Canada's sovereign defence-industrial base through procurement reform, Buy-Canada advocacy, and IP protection.">
     <meta property="og:type" content="website">
-    <link rel="icon" type="icon/ico" href="canadian_flag_favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="alliancedesign/ACDC Logo Black-REVA.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="alliancedesign/ACDC Logo White-REVA.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="acdc.css">
 </head>
 <body>
-    <div class="page">
-        <div class="map-overlay" aria-hidden="true"></div>
-        <div class="pulse-layer" aria-hidden="true"></div>
-
-        <main class="content">
-            <section class="hero">
-                <div class="hero-heading">
-                    <p class="hero-title">Alliance of Canadian Defence Companies</p>
-                    <img src="Flag_of_Canada.svg" alt="Canadian Flag" class="hero-flag">
-                </div>
-
-                <p class="lead">
-                    ACDC aligns Canada's emerging defence firms to provide modern, scalable and export-ready systems—reducing dependence on foreign primes while accelerating adoption within the Canadian Armed Forces.
-                </p>
-
-                <div class="hero-actions">
-                    <div class="cta-tray">
-                        <div class="cta-group">
-                            <button class="cta primary" id="contactBtn">
-                                Contact Us
-                            </button>
-                        </div>
-                        <div class="hero-brand">
-                            <div class="logo-container">
-                                <img src="logo-white.png" alt="Dominion Dynamics" class="logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal" aria-label="Close modal">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            
-            <div class="modal-header">
-                <h2>Get in Touch</h2>
-                <p>We'll connect you with the right team members to discuss ACDC's capabilities.</p>
-            </div>
-
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="userEmail">Your Email</label>
-                    <input 
-                        type="email" 
-                        id="userEmail" 
-                        name="email" 
-                        required 
-                        placeholder="john.doe@example.com"
-                        autocomplete="email"
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="userName">Your Name</label>
-                    <input 
-                        type="text" 
-                        id="userName" 
-                        name="name" 
-                        required 
-                        placeholder="John Doe"
-                        autocomplete="name"
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="userOrganization">Organization (Optional)</label>
-                    <input 
-                        type="text" 
-                        id="userOrganization" 
-                        name="organization" 
-                        placeholder="Department of National Defence"
-                        autocomplete="organization"
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="userMessage">Message</label>
-                    <textarea 
-                        id="userMessage" 
-                        name="message" 
-                        rows="4" 
-                        required
-                        placeholder="I'm interested in learning more about ACDC's capabilities and how we might collaborate..."
-                    ></textarea>
-                </div>
-
-                <div class="email-selector">
-                    <span class="selector-label">Send via:</span>
-                    <div class="email-icons">
-                        <button type="button" class="email-icon-btn" id="gmailIcon" aria-label="Send via Gmail">
-                            <img src="Gmail.svg" alt="Gmail" class="gmail-svg">
-                            <span class="tooltip">Gmail</span>
-                            <span class="feedback-msg"></span>
-                        </button>
-                        
-                        <button type="button" class="email-icon-btn" id="outlookIcon" aria-label="Send via Outlook">
-                            <img src="outlook.svg" alt="Outlook" class="outlook-svg">
-                            <span class="tooltip">Outlook</span>
-                            <span class="feedback-msg"></span>
-                        </button>
-                    </div>
-                </div>
-            </form>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="alliancedesign/ACDC Logo Black-REVA.svg" alt="ACDC Logo">
+            </a>
+            <nav class="nav">
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#enlist" class="nav-btn">Enlist</a>
+                <a href="#conference" class="nav-btn">Conference</a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <script src="ambient-bg.js" defer></script>
-    <script src="contact-form.js" defer></script>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-accent"></div>
+        <img src="alliancedesign/ACDC-Hero-01.jpg" alt="Canadian soldiers in action" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="highlight">Alliance of Canadian</span>
+                <span class="highlight">Defence Companies (ACDC)</span>
+            </h1>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-box">
+            <div class="about-text">
+                <p>The Alliance of Canadian Defence Companies (ACDC) exists to rebuild Canada's sovereign defence-industrial base. We champion Canadian-controlled defence companies that design, build, sustain, and export next-generation defence platforms — reducing reliance on foreign primes and restoring national ownership of critical systems. Through procurement reform, Buy-Canada advocacy, IP protection, and faster paths from prototype to operations, ACDC is the unified voice of Canada's modern defence builders.</p>
+            </div>
+            <div class="about-cta">
+                <a href="#enlist" class="btn-enlist">Enlist</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="collage" id="membership">
+        
+        <div class="collage-row membership-row">
+            <div class="text-side left">
+                <h2 class="section-title"><span class="highlight">Membership</span></h2>
+                <div class="text-lines">
+                    <span class="text-box">ACDC membership is open to</span>
+                    <span class="text-box"><span class="underline">Canadian-controlled</span> defence companies</span>
+                    <span class="text-box">committed to building sovereign capability</span>
+                    <span class="text-box">and export-ready platforms.</span>
+                </div>
+            </div>
+            <div class="image-side right">
+                <img src="alliancedesign/ACDC-Canadarm-01.jpg" alt="Shuttle Remote Manipulator System - Canadarm" class="collage-img canadarm-img">
+            </div>
+        </div>
+
+        <div class="avro-row">
+            <div class="image-side left">
+                <img src="alliancedesign/ACDC-Avro-Arrow-01.jpg" alt="Avro Arrow - Supersonic Fly-by-wire" class="collage-img avro-bg-img">
+            </div>
+            <div class="avro-content">
+                <h2 class="section-title"><span class="highlight">Our Members Include</span></h2>
+                <div class="text-lines">
+                    <span class="text-box">&gt; Platform developers and system integrators</span>
+                    <span class="text-box">&gt; Advanced manufacturing and energetics firms</span>
+                    <span class="text-box">&gt; Software, autonomy, AI, and sensor companies</span>
+                    <span class="text-box">&gt; Sustainment, logistics, and lifecycle support providers</span>
+                    <span class="text-box">&gt; Dual-use technology leaders serving defence and allied markets</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="collage-row benefits-row">
+            <div class="text-side left">
+                <h2 class="section-title"><span class="highlight">Members Benefit From</span></h2>
+                <div class="text-lines">
+                    <span class="text-box">&gt; Direct advocacy</span>
+                    <span class="text-box">&gt; Coordinated industry representation on</span>
+                    <span class="text-box">procurement reform</span>
+                    <span class="text-box">&gt; Coalition-building to bid and deliver</span>
+                    <span class="text-box">integrated national capabilities</span>
+                    <span class="text-box">&gt; Protection of Canadian intellectual</span>
+                    <span class="text-box">property and export readiness support</span>
+                    <span class="text-box">&gt; Participation in capability showcases and</span>
+                    <span class="text-box">classified briefings</span>
+                    <span class="text-box">&gt; A shared platform to compete — and win —</span>
+                    <span class="text-box">against foreign primes</span>
+                </div>
+            </div>
+            <div class="image-side right">
+                <img src="alliancedesign/ACDC-Battle-of-the-Atlantic-01.jpg" alt="The Battle of the Atlantic" class="collage-img atlantic-img">
+            </div>
+        </div>
+
+        <div class="collage-row events-row">
+            <div class="image-side left">
+                <img src="alliancedesign/ACDC-Waterloo-01.jpg" alt="University of Waterloo" class="collage-img waterloo-img">
+            </div>
+            <div class="text-side right">
+                <h2 class="section-title"><span class="highlight">Events</span></h2>
+                <div class="text-lines">
+                    <span class="text-box">ACDC convenes the Canadian defence ecosystem to</span>
+                    <span class="text-box">accelerate real capability delivery.</span>
+                    <span class="text-box">Our events program includes: Capability Summits,</span>
+                    <span class="text-box">Procurement &amp; Policy Workshops, Platform</span>
+                    <span class="text-box">Showcases, Coalition Formation Forums</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="conference" id="conference">
+        <img src="alliancedesign/ACDC-Conference-01.jpg" alt="ACDC Conference" class="conference-img">
+    </section>
+
+    <section class="enlist-cta" id="enlist">
+        <button class="btn-enlist-large">Enlist</button>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; Alliance of Canadian Defence Companies Inc.</p>
+            </div>
+            <div class="footer-right">
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="X (Twitter)" class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="acdc.js"></script>
 </body>
 </html>
