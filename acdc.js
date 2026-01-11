@@ -1,15 +1,24 @@
 // ACDC Website JavaScript
 
-// Scale the fixed 1200px layout to fit viewport
+// Scale the fixed 1200px layout to fit viewport - DESKTOP ONLY
 function scaleLayout() {
     const wrapper = document.querySelector('.site-wrapper');
     const baseWidth = 1200;
+    const mobileBreakpoint = 768;
     const viewportWidth = window.innerWidth;
-    const scale = viewportWidth / baseWidth;
     
-    wrapper.style.transform = `scale(${scale})`;
-    // Adjust body height to account for scaled content
-    document.body.style.height = (wrapper.offsetHeight * scale) + 'px';
+    // Only scale on desktop (>768px)
+    if (viewportWidth > mobileBreakpoint) {
+        const scale = viewportWidth / baseWidth;
+        wrapper.style.transform = `scale(${scale})`;
+        wrapper.style.transformOrigin = 'top left';
+        document.body.style.height = (wrapper.offsetHeight * scale) + 'px';
+    } else {
+        // Mobile - remove all scaling, let CSS handle it
+        wrapper.style.transform = 'none';
+        wrapper.style.transformOrigin = '';
+        document.body.style.height = 'auto';
+    }
 }
 
 scaleLayout();
